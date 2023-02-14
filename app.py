@@ -13,11 +13,10 @@ from pymongo import MongoClient
 app = Flask(__name__)    # Construct an instance of Flask class for our webapp
 
 # url = f"mongodb://myuser:mypassword@my-mongodb.svc.cluster.local"
-# 172.21.118.63
-# url = f"mongodb://172.21.250.170"
 url = f"mongodb://172.21.250.170"
-client = MongoClient(url)
+
 print(f"connecting to url: {url}")
+client = MongoClient(url)
 
 # print(client.tododb.list_collection_names())
 for db in client.list_databases():
