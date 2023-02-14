@@ -13,7 +13,8 @@ from pymongo import MongoClient
 app = Flask(__name__)    # Construct an instance of Flask class for our webapp
 
 # url = f"mongodb://myuser:mypassword@my-mongodb.svc.cluster.local"
-url = f"mongodb://172.21.250.170"
+# url = f"mongodb://172.21.250.170"
+url = f"mongodb://my-mongodb.sn-labs-captainfedo1.svc.cluster.local"
 
 print(f"connecting to url: {url}")
 client = MongoClient(url)
