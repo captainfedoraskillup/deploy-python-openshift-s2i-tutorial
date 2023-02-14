@@ -12,7 +12,7 @@ from flask import Flask  # From module flask import class Flask
 from pymongo import MongoClient
 app = Flask(__name__)    # Construct an instance of Flask class for our webapp
 
-client = MongoClient('my-mongodb://%s:%s@my-mongodb' % ('myuser', 'mypassword'))
+client = MongoClient('mongodb://%s:%s@my-mongodb' % ('myuser', 'mypassword'))
 
 # print(client.tododb.list_collection_names())
 for db in client.list_databases():
