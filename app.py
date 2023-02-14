@@ -8,19 +8,16 @@ Created on 04-Sep-2019
 """
 hello_flask: First Python-Flask webapp
 """
+import os
 from flask import Flask  # From module flask import class Flask
 from pymongo import MongoClient
 app = Flask(__name__)    # Construct an instance of Flask class for our webapp
 
-# url = f"mongodb://myuser:mypassword@my-mongodb.svc.cluster.local"
-# url = f"mongodb://172.21.250.170"
-
-import os
 
 mongodb_service = os.environ.get('MONGODB_SERVICE')
 print(f'The value of MY_VAR is: {mongodb_service}')
 
-url = f"mongodb://my-mongodb.sn-labs-captainfedo1.svc.cluster.local"
+url = f"mongodb://{mongodb_service}"
 
 print(f"connecting to url: {url}")
 client = MongoClient(url)
