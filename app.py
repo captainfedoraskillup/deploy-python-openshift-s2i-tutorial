@@ -14,6 +14,12 @@ app = Flask(__name__)    # Construct an instance of Flask class for our webapp
 
 # url = f"mongodb://myuser:mypassword@my-mongodb.svc.cluster.local"
 # url = f"mongodb://172.21.250.170"
+
+import os
+
+mongodb_service = os.environ.get('MONGODB_SERVICE')
+print(f'The value of MY_VAR is: {my_var_value}')
+
 url = f"mongodb://my-mongodb.sn-labs-captainfedo1.svc.cluster.local"
 
 print(f"connecting to url: {url}")
