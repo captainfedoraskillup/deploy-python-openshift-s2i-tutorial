@@ -15,7 +15,7 @@ app = Flask(__name__)    # Construct an instance of Flask class for our webapp
 # url = f"mongodb://myuser:mypassword@my-mongodb.svc.cluster.local"
 # 172.21.118.63
 # url = f"mongodb://172.21.250.170"
-url = f"mongodb://myuser:mypassword@my-mongodb.svc.cluster.local"
+url = f"mongodb://myuser:mypassword@172.21.250.170"
 client = MongoClient(url)
 print(f"connecting to url: {url}")
 
