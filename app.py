@@ -18,7 +18,7 @@ app = Flask(__name__)    # Construct an instance of Flask class for our webapp
 import os
 
 mongodb_service = os.environ.get('MONGODB_SERVICE')
-print(f'The value of MY_VAR is: {my_var_value}')
+print(f'The value of MY_VAR is: {mongodb_service}')
 
 url = f"mongodb://my-mongodb.sn-labs-captainfedo1.svc.cluster.local"
 
